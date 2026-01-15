@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>📋Mi lista de tareas</h1>
+      <div class="input-container">
+        <input type="text" id="tareaInput" 
+        placeholder="Escribe una tarea">
+        <button id="agregarBtn">Agregar</button>
+      </div>
+      <div class="listas">
+        <div>
+     <h3> Tareas por hacer </h3>
+     <ul id="listaPendientes"></ul>
+     </div>
+     
+     <div>
+     <h3> Tareas terminadas</h3>
+     <ul id="listaHechas"></ul>
+     </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

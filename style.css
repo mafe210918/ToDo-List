@@ -1,0 +1,138 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f6f0ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1{
+    color: #7b2cbf;
+
+}
+
+.input-container{
+    display: flex;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+input{
+    flex: 1;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button{
+    background-color: #ff70a6;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2 ease, transform 0.1 ease;
+}
+
+button:hover{
+    background-color: #ff4d8d;
+}
+
+button:active{
+    transform: scale(0.95);
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+
+}
+
+li{
+    background: #f3e8ff;
+    padding: 8px;
+    margin-bottom: 6px;
+    border-radius: 6px;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: aparecer 0.3s  ease forwards;
+}
+
+
+@keyframes aparecer{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.listas{
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+
+
+}
+
+.listas div{
+    flex: 1;
+}
+h3{
+    margin-top: 15px;
+    color: #5a189a;
+} 
+
+li{
+    transition: background-color 0.3 ease, transform 0.3 ease;
+}
+
+li:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+.completada{
+    background-color: #e0e0e0;
+    text-decoration: line-through;
+    color: gray;
+    transform: scale(0.97);
+}
+
+.listas{
+    animation: aparecerSuave 0.5 ease;
+}
+
+@keyframes aparecerSuave {
+    from{
+        opacity: 0;
+        transform: translateY(10px);
+
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+span{
+    transition: transform 0.2 ease;
+}
+
+span:hover{
+    transform: scale(1.2);
+}
+
+@media (max-width: 600px){
+    .listas{
+        flex-direction: column;
+    }
+}
